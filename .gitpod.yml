@@ -2,8 +2,8 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: yarn install && yarn run build
-    command: yarn run start
+  - init: yarn install
+    command: yarn dev
 vscode:
   extensions:
     - octref.vetur@0.26.1:NrU4ZTLY6IF/1G6B/QLuIQ==
