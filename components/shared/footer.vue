@@ -1,17 +1,19 @@
 <template>
-  <footer class="footer-container">
-
+  <footer class="footer-container d-flex flex-column">
     <!--Contact Section-->
     <div
-      class="my-wrapper d-flex flex-wrap justify-space-between mt-13 ml-5 mr-5"
+      class="my-wrapper justify-space-between d-flex flex-wrap mt-13 ml-5 mr-5"
     >
-      <div class="d-flex flex-column" style="width: 100%">
-        <p style="font-size: 1.2rem" class="text-capitalize font-weight-bold">
+      <div class="d-inline-flex flex-column">
+        <span
+          style="font-size: 1.2rem"
+          class="text-capitalize font-weight-bold"
+        >
           want to know lassaana better?
-        </p>
+        </span>
 
         <!--Social Media Section-->
-        <div>
+        <div class="mt-3">
           <a aria-label="Facebook" href="https://facebook.com" class="mr-2">
             <span class="fb-logo material-icons"> facebook </span>
           </a>
@@ -24,19 +26,22 @@
 
         <!--Contact section-->
         <div class="text-capitalize font-weight-bold mt-3">
-          <p>custom service: <a class="tel">63930906</a></p>
+          <span>custom service: <a class="tel">63930906</a></span>
         </div>
       </div>
 
       <!--Logo section-->
-      <div class="ml-auto">
+      <div>
         <v-img
-          class="ml-auto mr-auto"
           cover
           width="100"
           :src="require('@/assets/images/logo.png')"
         ></v-img>
       </div>
+    </div>
+
+    <div class="copyright-container mb-5">
+      <span> © 2015 by LASSANA Limited </span>
     </div>
   </footer>
 </template>
@@ -49,6 +54,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.copyright-container {
+  width: 100%;
+  color: white;
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: auto;
+}
+
 .fb-logo {
   color: white;
   font-size: 39.5px;
@@ -65,8 +79,9 @@ export default {
 
   .my-wrapper {
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
     color: white;
   }
 }

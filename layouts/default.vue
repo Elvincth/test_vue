@@ -6,6 +6,7 @@
     so I made just a single component as page-->
       <homePage></homePage>
     </div>
+
     <!--Footer for all-->
     <myFooter></myFooter>
   </v-app>
@@ -38,6 +39,7 @@ export default {
 //Set max width
 .my-app-container {
   max-width: 1000px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }

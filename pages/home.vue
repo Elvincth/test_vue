@@ -81,6 +81,7 @@ export default {
 .card-wrapper:not(:last-child) {
   margin-right: 5rem;
 }
+
 .card-wrapper {
   height: 280px;
   width: 200px;

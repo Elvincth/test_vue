@@ -1,13 +1,12 @@
 <template>
-  <!-- <a :href="link"> -->
+  <a :href="link">
     <div class="my-card-container" :style="cssVars">
       <div class="card" :style="{ backgroundImage: `url(${src})` }"></div>
       <div class="card-title">
         <span>{{ title }}</span>
       </div>
-      <div></div>
     </div>
-  <!-- </a> -->
+  </a>
 </template>
 
 <script>
@@ -78,16 +77,20 @@ $width: 180px;
     background-image: inherit;
     @include card;
   }
-
-  &:hover::before {
-    transform: scale(1.3);
-  }
 }
 
+//For bootom card overlay efefct
 .my-card-container:hover .card-title {
   transform: scale(1.9) translate(-21px, -29px);
   backdrop-filter: blur(5px);
   background-color: rgba(var(--rgbColor), 0.6);
+}
+
+//Resize background effect
+.my-card-container:hover .card {
+  &::before {
+    transform: scale(1.3);
+  }
 }
 
 .card-title {
