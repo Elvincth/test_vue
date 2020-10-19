@@ -1,7 +1,13 @@
 <template>
-  <v-app light>
-    <div class="d-flex">
-      <img src="~/assets/logo.png"></img>
+  <v-app light class="my-app-container">
+    <div class="d-flex nav-bar">
+      <img class="logo" src="~/assets/images/logo.jpg" />
+      <div class="items ml-auto">
+        <a>About</a>
+        <a>Promotion</a>
+        <a>Shop</a>
+        <a>Our Store</a>
+      </div>
     </div>
   </v-app>
 </template>
@@ -13,3 +19,15 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+//For nav bar
+.nav-bar {
+  .logo {
+    width: 3rem;
+  }
+  //Nav items
+  .items {
+  }
+}
+</style>
