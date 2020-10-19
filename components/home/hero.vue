@@ -29,7 +29,7 @@
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 575px) {
   .hero-container {
     div {
       width: 100% !important;
