@@ -1,6 +1,6 @@
 <template>
-  <v-app light class="my-app-container">
-    <div class="d-flex nav-bar">
+  <v-app light class="my-app-container ">
+    <div class="d-flex align-center nav-bar ">
       <img class="logo" src="~/assets/images/logo.jpg" />
       <div class="items ml-auto">
         <a>About</a>
@@ -28,6 +28,10 @@ export default {
   }
   //Nav items
   .items {
+    a {
+      color: $font-color;
+      margin-left: 3rem;
+    }
   }
 }
 </style>
