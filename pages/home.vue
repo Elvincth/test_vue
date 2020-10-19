@@ -1,44 +1,19 @@
 <template>
-  <div class="d-flex flex-wrap hero-container ml-2 mr-2 mt-6">
-    <!--Hero text-->
-    <div>
-      <h1>Lassana Delights Your Daily Coffee Experience</h1>
-      <p>
-        Lassana is a Hong Kong local brand that specialize in coffee and fresh
-        bakery. We are here to provide excellent food excellent food service
-        that inspire you everyday.
-      </p>
-    </div>
-    <!--Hero Image-->
-    <div>
-      <v-img
-        class="ml-auto mr-auto"
-        contain
-        max-width="250"
-        :src="require('@/assets/images/hero-image.jpg')"
-      ></v-img>
-    </div>
+  <div>
+    <!--Hero banner-->
+    <hero></hero>
+    <carousel></carousel>
   </div>
 </template>
 
 <script>
+import hero from "@/components/home/hero";
+import carousel from "@/components/home/carousel";
 export default {
-  components: {},
+  components: {
+    hero,
+    carousel,
+  },
 };
 </script>
 
-<style lang="scss" scoped>
-.hero-container {
-  div {
-    width: 50%;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .hero-container {
-    div {
-      width: 100% !important;
-    }
-  }
-}
-</style>
