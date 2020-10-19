@@ -7,9 +7,11 @@
     <!--Card-->
     <div class="ml-5 mr-5">
       <card
-        title="Our coffee"
-        rgbColor="0,0,0"
-        :src="require('@/assets/images/card/coffee.jpg')"
+        v-for="(item, i) in cardItems"
+        :key="i"
+        :title="item.title"
+        :rgbColor="item.rgbColor"
+        :src="item.src"
       ></card>
     </div>
   </div>
@@ -23,18 +25,27 @@ export default {
   components: {
     hero,
     carousel,
-    cardItems: [
-      {
-        title: "our coffee",
-        rgbColor: "0,0,0",
-        src: "@/assets/images/card/coffee.jpg",
-      },
-            {
-        title: "our pastry",
-        rgbColor: "0,0,0",
-        src: "@/assets/images/card/coffee.jpg",
-      },
-    ],
+  },
+  data() {
+    return {
+      cardItems: [
+        {
+          title: "our coffee",
+          rgbColor: "0,0,0",
+          src: require("@/assets/images/card/coffee.jpg"),
+        },
+        {
+          title: "our pastry",
+          rgbColor: "0,0,0",
+          src: require("@/assets/images/card/pastry.jpg"),
+        },
+        {
+          title: "our food",
+          rgbColor: "0,0,0",
+          src: require("@/assets/images/card/food.jpg"),
+        },
+      ],
+    };
   },
 };
 </script>
