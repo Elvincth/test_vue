@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <div class="mb-10">
     <!--Hero banner-->
     <hero></hero>
     <!--Carousel banner-->
     <carousel></carousel>
     <!--Card-->
-    <card title="Our coffee" src="xxx"></card>
+    <div class="ml-5 mr-5">
+      <card
+        title="Our coffee"
+        :src="require('@/assets/images/card/coffee.jpg')"
+      ></card>
+    </div>
   </div>
 </template>
 
