@@ -18,7 +18,6 @@ export default {
   head: {
     titleTemplate: "%s - " + process.env.npm_package_name,
     title: process.env.npm_package_name || "",
-
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -28,7 +27,13 @@ export default {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Material+Icons"
+      }
+    ]
   },
   /*
    ** Global CSS
@@ -60,8 +65,6 @@ export default {
     customVariables: ["~/assets/variables.scss"],
     theme: {
       dark: false,
-      font: true,
-      icons: "md",
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -70,7 +73,7 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          success: colors.green.accent3,
         }
       }
     }

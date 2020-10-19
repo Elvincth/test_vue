@@ -5,8 +5,15 @@
     <!--Carousel banner-->
     <carousel></carousel>
     <!--Card-->
-    <div class="ml-5 mr-5 d-flex justify-center" style="width: 100%">
-      <div class="card-wrapper" v-for="(item, i) in cardItems" :key="i">
+    <div
+      class="d-flex flex-wrap justify-content-center align-center"
+      style="width: 100%"
+    >
+      <div
+        class="card-wrapper ml-auto mr-auto"
+        v-for="(item, i) in cardItems"
+        :key="i"
+      >
         <card
           :title="item.title"
           :rgbColor="item.rgbColor"
@@ -16,9 +23,24 @@
     </div>
 
     <!--FAB Button-->
-    <v-btn color="pink" dark small absolute bottom left fab
-      ><v-icon>home</v-icon></v-btn
-    >
+    <v-btn color="var(--main)" light fixed bottom right fab
+      ><span class="material-icons">shopping_basket</span>
+    </v-btn>
+
+    <!--Sub footer-->
+    <div class="d-flex flex-wrap flex-column mt-15 ml-3 mr-3">
+      <div>
+        <p class="font-weight-bold">
+          For Further Information About Lassana Service including Coffee and
+          Fresh Bakery
+        </p>
+      </div>
+      <div>
+        <v-btn elevation="0" large color="var(--main)"
+          ><span style="color: white">Contact Us</span></v-btn
+        >
+      </div>
+    </div>
   </div>
 </template>
 
@@ -56,8 +78,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card-wrapper {
+.card-wrapper:not(:last-child) {
   margin-right: 5rem;
+}
+.card-wrapper {
+  height: 280px;
+  width: 200px;
 }
 </style>
 
