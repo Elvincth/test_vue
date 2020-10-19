@@ -1,7 +1,11 @@
 <template>
   <footer class="footer-container">
-    <div class="my-wrapper d-flex mt-13">
-      <div class="d-flex flex-column">
+
+    <!--Contact Section-->
+    <div
+      class="my-wrapper d-flex flex-wrap justify-space-between mt-13 ml-5 mr-5"
+    >
+      <div class="d-flex flex-column" style="width: 100%">
         <p style="font-size: 1.2rem" class="text-capitalize font-weight-bold">
           want to know lassaana better?
         </p>
@@ -17,9 +21,22 @@
             <instagramIcon></instagramIcon>
           </a>
         </div>
+
+        <!--Contact section-->
+        <div class="text-capitalize font-weight-bold mt-3">
+          <p>custom service: <a class="tel">63930906</a></p>
+        </div>
       </div>
 
-      <div></div>
+      <!--Logo section-->
+      <div class="ml-auto">
+        <v-img
+          class="ml-auto mr-auto"
+          cover
+          width="100"
+          :src="require('@/assets/images/logo.png')"
+        ></v-img>
+      </div>
     </div>
   </footer>
 </template>
@@ -37,6 +54,10 @@ export default {
   font-size: 39.5px;
 }
 
+.tel {
+  color: white;
+}
+
 .footer-container {
   background: black;
   min-height: 300px;
@@ -49,4 +70,10 @@ export default {
     color: white;
   }
 }
+
+// @media (max-width: 300px){
+//       //contact
+//     .contact-container{flex-direction: column!important;
+//     }
+// }
 </style>

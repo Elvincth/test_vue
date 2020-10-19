@@ -2,7 +2,7 @@
   <div>
     <div class="desktop-only">
       <div class="d-flex ml-2 mr-2 mt-5 align-center nav-bar">
-        <img class="logo" src="~/assets/images/logo.jpg" />
+        <img class="logo" src="~/assets/images/logo.png" />
         <div class="items ml-auto">
           <a v-for="(item, i) in items" :key="i" :href="item.href">{{
             item.name
