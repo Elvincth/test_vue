@@ -1,6 +1,6 @@
 <template>
-  <v-app light class="my-app-container ">
-    <div class="d-flex align-center nav-bar ">
+  <v-app light class="my-app-container">
+    <div class="d-flex align-center nav-bar">
       <img class="logo" src="~/assets/images/logo.jpg" />
       <div class="items ml-auto">
         <a>About</a>
@@ -21,6 +21,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//Set max width
+.my-app-container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 //For nav bar
 .nav-bar {
   .logo {
