@@ -11,7 +11,12 @@
     </div>
     <!--Hero Image-->
     <div>
-      <v-img class="ml-auto mr-auto" contain :src="require('@/assets/images/hero-image.jpg')"></v-img>
+      <v-img
+        class="ml-auto mr-auto"
+        contain
+        max-width="250"
+        :src="require('@/assets/images/hero-image.jpg')"
+      ></v-img>
     </div>
   </div>
 </template>
@@ -26,6 +31,14 @@ export default {
 .hero-container {
   div {
     width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-container {
+    div {
+      width: 100% !important;
+    }
   }
 }
 </style>
