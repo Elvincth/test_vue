@@ -1,19 +1,21 @@
 <template>
-  <div class="my-card-container" :style="cssVars">
-    <div class="card" :style="{ backgroundImage: `url(${src})` }"></div>
-    <div class="card-title">
-      <span>{{ title }}</span>
+  <!-- <a :href="link"> -->
+    <div class="my-card-container" :style="cssVars">
+      <div class="card" :style="{ backgroundImage: `url(${src})` }"></div>
+      <div class="card-title">
+        <span>{{ title }}</span>
+      </div>
+      <div></div>
     </div>
-    <div></div>
-  </div>
+  <!-- </a> -->
 </template>
 
 <script>
 /**
- * @param {String} title
- * @param {String} src
- * @param {String} color
- * @param {String} link
+ * @param {String} title Title of the lower card
+ * @param {String} src Image src
+ * @param {String} color Color of the card using rgb e.g. 0,0,0
+ * @param {String} link Href link
  */
 export default {
   props: {

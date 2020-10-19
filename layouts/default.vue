@@ -1,23 +1,26 @@
 <template>
-  <v-app light class="my-app-container">
-    <navbar></navbar>
-    <!--Actually we need a router outlet here but since it is a SPA,
+  <v-app light>
+    <div class="my-app-container">
+      <navbar></navbar>
+      <!--Actually we need a router outlet here but since it is a SPA,
     so I made just a single component as page-->
-    <homePage></homePage>
-    <footer></footer>
+      <homePage></homePage>
+    </div>
+    <!--Footer for all-->
+    <myFooter></myFooter>
   </v-app>
 </template>
 
 <script>
 import navbar from "@/components/shared/navbar";
 import homePage from "@/pages/home";
-import footer from "@/components/shared/footer";
+import myFooter from "@/components/shared/footer";
 
 export default {
   components: {
     navbar,
     homePage,
-    footer,
+    myFooter,
   },
   data() {
     return {};

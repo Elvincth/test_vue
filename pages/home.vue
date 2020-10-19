@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-10">
+  <main class="mb-10">
     <!--Hero banner-->
     <hero></hero>
     <!--Carousel banner-->
@@ -41,7 +41,7 @@
         >
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
